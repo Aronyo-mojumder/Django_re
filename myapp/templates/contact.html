@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% block content %}
+{% if messages %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                {% for message in messages %}
+                    <div class="alert alert-success" role="alert">
+                        <h4 style="text-align: center">{{ message }}</h4>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endif %}
+
+<section id="contact_main">
+    <div class="about_main clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="col-sm-6">
+                        <div class="contact_main_1">
+                            <h2>CONTACT</h2>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="contact_main_2">
+                            <ul>
+                                <li class="well_9"><a href="#">HOME</a></li>
+                                <li class="well_10">/</li>
+                                <li class="well_11">CONTACT</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 space_all">
+                <div class="contact_1">
+                     <h2 class="text-center">NULLA QUIS SEM NIBH</h2>
+                     <hr class="hr_2">
+                     <p class="text-center">Sed cursus ante dapibus diam. Sed nisi. Nulla</br>
+                quis sem at nibh elementum imperdiet. Duis!</p>
+                    </div>
+                    <div class="col-sm-4 space_all">
+                     <div class="col-sm-12 space_all">
+                      <div class="col-sm-2 space_all">
+                       <div class="contact_2">
+                        <p><a href="#"><i class="fa fa-home"></i></a></p>
+                       </div>
+                      </div>
+                      <div class="col-sm-10 space_all">
+                       <div class="contact_3">
+                        <h4>NULLA AD:</h4>
+                        <p>Fusce Nec Tellus Sed Augue</br>
+                        Sed Dignissim Lacinia Nunc</p>
+                       </div>
+                      </div>
+                     </div>
+                     <div class="col-sm-12 space_all">
+                      <div class="col-sm-2 space_all">
+                       <div class="contact_4">
+                        <p><a href="#"><i class="fa fa-phone"></i></a></p>
+                       </div>
+                      </div>
+                      <div class="col-sm-10 space_all">
+                       <div class="contact_3">
+                        <h4>CALL US:</h4>
+                        <p>+91 1234 456 789</p>
+                       </div>
+                      </div>
+                     </div>
+                     <div class="col-sm-12 space_all">
+                      <div class="col-sm-2 space_all">
+                       <div class="contact_2">
+                        <p><a href="#"><i class="fa fa-envelope"></i></a></p>
+                       </div>
+                      </div>
+                      <div class="col-sm-10 space_all">
+                       <div class="contact_3">
+                        <h4>DUIS AD:</h4>
+                        <p><a href="#">info@gmail.com</a></p>
+                       </div>
+                      </div>
+                     </div>
+                    </div>
+                <div class="col-sm-8">
+                    <!-- Form for users to enter their information -->
+                    <form method="post" action="{% url 'contact' %}">
+                        {% csrf_token %}
+                        <div class="col-sm-12 space_all">
+                            <div class="col-sm-6">
+                                <div class="contact_5">
+                                    <input type="text" name="name" class="form-control" placeholder="Enter Your Name *">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="contact_5">
+                                    <input type="email" name="email" class="form-control" placeholder="Enter Your Valid E-Mail *">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="contact_6">
+                                <input type="text" name="number" class="form-control" placeholder="Enter Your Mobile Number">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="contact_7">
+                                <textarea name="message" placeholder="Enter Your Message" class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="contact_8">
+                                <button type="submit">SUBMIT</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

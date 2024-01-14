@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section id="team_main">
+    <div class="about_main clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="col-sm-6 team">
+                        <div class="team_main_1">
+                            <h2>TEAM</h2>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 team">
+                        <div class="team_main_2">
+                            <ul>
+                                <li class="well_9"><a href="#">HOME</a></li>
+                                <li class="well_10">/</li>
+                                <li class="well_11">TEAM</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="layout" class="clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="layout_1">
+                    <h2>Team Member</h2>
+                </div>
+
+               {% for team_member in teams %}
+                <div class="col-sm-3 team">
+                    <div class="layout_2">
+                        <p><a href="#"><img src="{{ team_member.member_img.url }}" width="100%" alt="{{ team_member.member_title }}"></a></p>
+                    </div>
+                    <div class="layout_3">
+                        <h3>{{ team_member.member_title }}</h3>
+                    </div>
+                    <div class="layout_4">
+                        <p>{{ team_member.member_description }}</p>
+                        <ul>
+                            <li><a href="{{ team_member.facebook_link }}"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="{{ team_member.twitter_link }}"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="{{ team_member.instagram_link }}"><i class="fab fa-instagram"></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                {% endfor %}
+                                <!-- Add more team members with similar structure if needed -->
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

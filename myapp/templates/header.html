@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="robots" content="noindex,nofollow" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recharge</title>
+	<link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static "css/font-awesome.min.css" %}" />
+
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arimo|Merriweather|Staatliches|Tenor+Sans" rel="stylesheet">
+
+    <link href="{% static "css/animate.css" %}" rel="stylesheet" type="text/css" media="all">
+    <link href="{% static "css/ken-burns.css" %}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{% static "css/all.min.css" %}" rel="stylesheet" type="text/css" media="all" />
+
+    <!-- Include jQuery before Bootstrap JavaScript -->
+    <script src="{% static 'js/jquery-2.1.1.min.js' %}"></script>
+
+    <script src="{% static 'js/all.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+  </head>
+<body>
+<div class="main clearfix cd-secondary-nav">
+	<section id="top">
+	 <div class="container">
+	  <div class="row">
+	   <div class="col-sm-12 space_all">
+		<div class="col-sm-3">
+		 <div class="top_1">
+		  <ul>
+			  <li class="well_1"><i class="fa fa-map-marker"></i></li>
+			  <li>Nunc</li>
+			  <li><i class="fa fa-dot-circle-o"></i></li>
+			  <li>Semper</li>
+			  <li><i class="fa fa-dot-circle-o"></i></li>
+			  <li>Lacinia</li>
+			  <li><i class="fa fa-dot-circle-o"></i></li>
+			  <li>SED</li>
+		  </ul>
+		 </div>
+		</div>
+		<div class="col-sm-4">
+		 <div class="top_3">
+		  <ul>
+			   <li class="well_8"><i class="fa fa-phone"></i>+91 1234 567 890</li>
+			   <li><i class="fa fa-envelope"></i>info@gmail.com</li>
+		  </ul>
+		 </div>
+		</div>
+		<div class="col-sm-5">
+		 <div class="top_2">
+		  <ul class="text-right">
+			  <li class="well_2"><i class="fa fa-clock-o"></i>Sun - Fri : 12.11 pm to 8.10 am</li>
+			  <li class="well_3"><a href="#"> <i class="fab fa-facebook"></i></a></li>
+			  <li class="well_4"><a href="#"><i class="fab fa-twitter"></i></a></li>
+			  <li class="well_5"><a href="#"><i class="fab fa-google-plus"></i></a></li>
+			  <li class="well_6"><a href="#"><i class="fab fa-linkedin"></i></a></li>
+		  </ul>
+		 </div>
+		</div>
+	   </div>
+	  </div>
+	 </div> 
+	</section>
+	<section id="header">
+	 <div class="container">
+	  <div class="row">
+	   <div class="col-sm-12 space_all">
+		 <nav class="navbar navbar-default" role="navigation">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+				   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				   <span class="sr-only">Toggle navigation</span>
+				   <span class="icon-bar"></span>
+				   <span class="icon-bar"></span>
+				   <span class="icon-bar"></span>
+				   </button>
+                    <a href="index.html"><span class="well_7">Applied</span> Science</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				   <ul class="nav navbar-nav navbar">
+					  <li class="active_1"><a class="color_1" href="{% url 'home' %}">HOME</a></li>
+					  <li><a class="color_1" href="{% url "about" %}">ABOUT</a></li>
+					  <li><a class="color_1" href="{% url 'projects' %}">PROJECT</a></li>
+					  <li><a class="color_1" href="{% url 'gallery' %}">GALLERY</a></li>
+					  <li><a class="color_1" href="{% url 'team' %}">TEAM</a></li>
+					  <li><a class="color_1" href="{% url 'contact' %}">CONTACT</a></li>
+					  <li class="dropdown">
+						<a class="dropdown-toggle color_1" data-toggle="dropdown" href="#" aria-expanded="false">DROPDOWN
+						<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+						  <li class="tell_1"><a href="{% url "about" %}">ABOUT</a></li>
+						  <li class="tell_1"><a class="color_1" href="{% url 'projects' %}">PROJECT</a></li>
+						  <li class="tell_1"><a class="color_1" href="{% url 'gallery' %}">GALLERY</a></li>
+						  <li class="tell_1"><a class="color_1" href="{% url 'team' %}">TEAM</a></li>
+						  <li class="tell_1"><a class="color_1" href="{% url 'contact' %}">CONTACT</a></li>
+						</ul>
+					  </li>
+				   </ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</nav>
+	   </div>
+	  </div>
+	 </div>
+	</section>
+</div>
