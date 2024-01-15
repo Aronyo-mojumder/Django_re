@@ -2,12 +2,17 @@ from xml.etree.ElementInclude import include
 
 from django.contrib import admin
 from django.urls import path
-
 from research import settings
 from . import views
 from django.conf.urls.static import static
-
 from .views import subscriber
+
+#admin customization
+
+admin.site.site_header = 'Research administration'
+admin.site.site_title = 'Welcome to Research Admin Dashboard'
+admin.site.index_title = 'Welcome to Research Admin portal'
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
