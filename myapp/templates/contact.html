@@ -1,18 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-{% if messages %}
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                {% for message in messages %}
-                    <div class="alert alert-success" role="alert">
-                        <h4 style="text-align: center">{{ message }}</h4>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-{% endif %}
 
 <section id="contact_main">
     <div class="about_main clearfix">

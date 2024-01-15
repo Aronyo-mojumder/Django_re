@@ -7,13 +7,12 @@ from research import settings
 from . import views
 from django.conf.urls.static import static
 
-
-
-
+from .views import subscriber
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
+    path('subscribe/', subscriber, name='subscribe'),
     path('home/', views.home, name='home'),
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),

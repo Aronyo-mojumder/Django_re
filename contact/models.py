@@ -11,3 +11,11 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
+
+class Subscriber(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+
+    def __str__(self):
+        return self.name
+

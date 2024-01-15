@@ -1,7 +1,10 @@
+from urllib import request
+
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from services.models import Service, Gallery, Team
-from contact.models import Contact
+from contact.models import Contact, Subscriber
+
 
 
 def home(request):
@@ -12,6 +15,7 @@ def home(request):
 
 def about(request):
     return render(request, 'about.html')
+
 
 def contact(request):
     if request.method == 'POST':
@@ -28,6 +32,25 @@ def contact(request):
         return redirect('contact')  # Redirect to the contact page again
 
     return render(request, 'contact.html')
+def subscriber(request):
+    if request.method == 'POST':
+        # Retrieve the name and email from the POST data
+        name = request.POST.get('name', '')  # Providing a default value to avoid potential NoneType
+        email = request.POST.get('email', '')
+
+        # Check if the name is not empty
+        if name:
+            # Now you can save the name and email to your Subscriber model
+            subscriber_db = Subscriber(name=name, email=email)
+            subscriber_db.save()
+
+            messages.success(request, 'Thank you for subscribing!')
+            return redirect('home')  # Assuming 'home' is the name of the URL pattern for your home page
+        else:
+            messages.error(request, 'Name cannot be empty.')
+
+    return render(request, 'index.html')
+
 
 def gallery(request):
     galleries_db = Gallery.objects.all()
